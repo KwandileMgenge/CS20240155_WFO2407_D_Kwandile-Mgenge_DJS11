@@ -22,3 +22,80 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+a {
+  margin: 2rem 0;
+}
+
+/* NAVBAR */
+
+.logo {
+  height: 10vh;
+  margin: 0 .5rem;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+}
+
+.logo span {
+  color: var(--edward-color);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+/* HOMEPAGE */
+
+.homepage {
+  height: 100vh;
+  background-image: url('./assets/el-gringo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homepage-content {
+  height: 90vh;
+  flex-direction: column;
+}
+
+.homepage-content div {
+  gap: 1em;
+}
+
+.homepage-content img {
+  width: 5rem;
+}
+
+.homepage-content h2 {
+  font-size: 2.5em;
+}
+
+.homepage-content h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+button {
+  color: var(--edward-color);
+  background: var(--primary-color);
+  padding: 1em 2em;
+  border: .2em solid var(--primary-color);;
+  border-radius: 2em;
+  font-weight: bolder;
+}
+
+button:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+/* D-R-Y */
+
+.logo,
+.homepage-content,
+.homepage-content div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
