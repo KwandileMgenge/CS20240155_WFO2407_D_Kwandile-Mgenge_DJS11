@@ -30,7 +30,7 @@ a {
 /* NAVBAR */
 
 .logo {
-  height: 10vh;
+  height: 15vh;
   color: var(--primary-color);
   background-color: var(--secondary-color);
   border-radius: 1rem;
@@ -89,12 +89,49 @@ button:hover {
   color: var(--primary-color);
 }
 
+/* PREVIEWS */
+
+.previews-page {
+  flex-direction: column;
+}
+
+.previews-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+}
+
+.podcast-tile {
+  flex-direction: column;
+  text-align: center;
+  gap: .5rem;
+}
+
+.podcast-img {
+  background-color: var(--edward-color);
+  padding: .3rem;
+  border-radius: .3rem;
+  transition: all 0.5s ease-out;
+}
+
+.podcast-img:hover {
+  background-color: var(--primary-color);
+}
+
+.podcast-tile img {
+  width: 7rem;
+}
+
 /* D-R-Y */
 
 .logo,
 .homepage-content,
 .homepage-content div,
-.loading, .error {
+.loading, .error,
+.previews-page,
+.podcast-tile,
+.podcast-img {
   display: flex;
   justify-content: center;
   align-items: center;
