@@ -93,7 +93,8 @@ button:hover {
 
 .logo,
 .homepage-content,
-.homepage-content div {
+.homepage-content div,
+.loading, .error {
   display: flex;
   justify-content: center;
   align-items: center;

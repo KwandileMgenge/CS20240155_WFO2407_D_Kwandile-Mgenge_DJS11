@@ -20,7 +20,7 @@ function HomePage() {
           </h3>
         </div>
 
-        <Link to={'/previews'}>
+        <Link to='/previews'>
           <button>
             Browser
           </button>
