@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { getPodcastPreviews } from '../PodcastData'
+import { genreList, getPodcastPreviews } from '../PodcastData'
 import React from 'react'
 
 function Previews() {
@@ -19,8 +19,15 @@ function Previews() {
       <div className='previews-container'>
         {sortedPreviews.map((podcast) => (
           <div className='podcast-tile' key={podcast.id}>
-            <div className='podcast-img'>
-              <img src={podcast.image} alt="podcast image" />
+            <div className='podcast-img-container'>
+              <img className='podcast-img' src={podcast.image} alt="podcast image" />
+              <div className='genre-list'>
+                {podcast.genres.map( (genreId) => (
+                  <p key={genreId}>
+                    {genreList[genreId]}
+                  </p>
+                ))}
+              </div>
             </div>
             <h3>{podcast.title}</h3>
             <p>{podcast.updated.slice(0,10)}</p>
