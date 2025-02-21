@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { genreList, getPodcastPreviews } from '../PodcastData'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Previews() {
   const { status, error, data: previews } = useQuery({
@@ -18,20 +19,23 @@ function Previews() {
       <h2>Explore Podcasts</h2>
       <div className='previews-container'>
         {sortedPreviews.map((podcast) => (
-          <div className='podcast-tile' key={podcast.id}>
-            <div className='podcast-img-container'>
-              <img className='podcast-img' src={podcast.image} alt="podcast image" />
-              <div className='genre-list'>
-                {podcast.genres.map( (genreId) => (
-                  <p key={genreId}>
-                    {genreList[genreId]}
-                  </p>
-                ))}
+          <Link to={`podcast/${podcast.id}`} className='preview-link'>
+            <div className='podcast-tile' key={podcast.id}>
+              <div className='podcast-img-container'>
+                <img className='podcast-img' src={podcast.image} alt="podcast image" />
+                <div className='genre-list'>
+                  {podcast.genres.map( (genreId) => (
+                    <p key={genreId}>
+                      {genreList[genreId]}
+                    </p>
+                  ))}
+                </div>
               </div>
+              <h3>{podcast.title}</h3>
+              <p>{podcast.updated.slice(0,10)}</p>
             </div>
-            <h3>{podcast.title}</h3>
-            <p>{podcast.updated.slice(0,10)}</p>
-          </div>
+          </Link>
+          
         ))}
       </div>
     </div>

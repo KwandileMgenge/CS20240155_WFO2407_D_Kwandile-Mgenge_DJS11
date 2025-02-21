@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage"
 import Layout from "./components/Layout"
 import Previews from "./components/Previews"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import PodcastDetails from "./components/PodcastDetails"
 
 const queryClient = new QueryClient();
 
@@ -16,6 +17,7 @@ function App() {
 
           <Route path="/previews" element={<Layout/>}>
             <Route index element={<Previews/>}/>
+            <Route path="podcast/:id" element={<PodcastDetails/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

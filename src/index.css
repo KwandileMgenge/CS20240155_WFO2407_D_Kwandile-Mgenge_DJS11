@@ -54,7 +54,7 @@ a {
 }
 
 .homepage-content {
-  height: 90vh;
+  height: 85vh;
   flex-direction: column;
 }
 
@@ -102,6 +102,11 @@ button:hover {
   gap: 1.5rem;
 }
 
+.preview-link {
+  text-decoration: none;
+  color: var(--edward-color);
+}
+
 .podcast-tile {
   flex-direction: column;
   text-align: center;
@@ -113,7 +118,7 @@ button:hover {
   background-color: var(--edward-color);
   padding: .3rem;
   border-radius: .3rem;
-  /* transition: all 3s ease; */
+  transition: all 3s ease;
 }
 
 .podcast-img {
