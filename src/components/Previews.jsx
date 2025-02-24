@@ -19,8 +19,8 @@ function Previews() {
       <h2>Explore Podcasts</h2>
       <div className='previews-container'>
         {sortedPreviews.map((podcast) => (
-          <Link to={`podcast/${podcast.id}`} className='preview-link'>
-            <div className='podcast-tile' key={podcast.id}>
+          <Link to={`podcast/${podcast.id}`} key={podcast.id} className='preview-link'>
+            <div className='podcast-tile'>
               <div className='podcast-img-container'>
                 <img className='podcast-img' src={podcast.image} alt="podcast image" />
                 <div className='genre-list'>
