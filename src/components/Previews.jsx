@@ -22,7 +22,7 @@ function Previews() {
           <Link to={`podcast/${podcast.id}`} key={podcast.id} className='preview-link'>
             <div className='podcast-tile'>
               <div className='podcast-img-container'>
-                <img className='podcast-img' src={podcast.image} alt="podcast image" />
+                <img className='preview-img' src={podcast.image} alt="Preview Image" />
                 <div className='genre-list'>
                   {podcast.genres.map( (genreId) => (
                     <p key={genreId}>

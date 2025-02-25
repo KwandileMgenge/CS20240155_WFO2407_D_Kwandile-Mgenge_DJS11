@@ -121,7 +121,7 @@ button:hover {
   transition: all 3s ease;
 }
 
-.podcast-img {
+.preview-img {
   max-width: 8rem;
 }
 
@@ -154,6 +154,25 @@ button:hover {
   opacity: 1;
 }
 
+/* PODCAST */
+
+.podcast-data {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+.podcast-info,
+.podcast-seasons {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.podcast-img {
+  max-width: 12rem;
+}
+
 /* D-R-Y */
 
 .logo,
@@ -162,7 +181,9 @@ button:hover {
 .loading, .error,
 .previews-page,
 .podcast-tile,
-.podcast-img{
+.podcast-img,
+.podcast-info,
+.podcast-seasons {
   display: flex;
   justify-content: center;
   align-items: center;
