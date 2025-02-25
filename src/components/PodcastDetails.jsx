@@ -1,11 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { getPodcastDetails } from '../PodcastData';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { genreList } from '../PodcastData';
 
 function PodcastDetails() {
   const params = useParams();
+  const navigate = useNavigate();
   const [expandedSeason, setExpandedSeason] = useState(null);
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -13,6 +14,14 @@ function PodcastDetails() {
     queryKey: [`podcast-data`, params.id],
     queryFn: () => getPodcastDetails(params.id),
   });
+
+  useEffect(() => {
+    if (expandedSeason !== null) {
+      navigate(`?season=${expandedSeason + 1}`);
+    } else {
+      navigate(".", { replace: true });
+    }
+  }, [expandedSeason, navigate]);
 
   if (status === 'pending') return <p className='loading'>Loading podcast...</p>;
   if (status === 'error') return <p className='error'>Error: {error.message}</p>;

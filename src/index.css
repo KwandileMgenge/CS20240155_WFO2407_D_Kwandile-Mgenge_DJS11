@@ -43,6 +43,11 @@ a {
   font-weight: 500;
 }
 
+.logo-link {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 /* HOMEPAGE */
 
 .homepage {
@@ -158,6 +163,7 @@ button:hover {
 
 .podcast-data {
   margin-top: 2rem;
+  margin-bottom: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
@@ -167,6 +173,12 @@ button:hover {
 .podcast-seasons {
   flex-direction: column;
   gap: 2rem;
+}
+
+.podcast-info {
+  display: flex;
+  align-items: center;
+  margin: 0 1rem;
 }
 
 .podcast-img {
@@ -182,7 +194,6 @@ button:hover {
 .previews-page,
 .podcast-tile,
 .podcast-img,
-.podcast-info,
 .podcast-seasons {
   display: flex;
   justify-content: center;
