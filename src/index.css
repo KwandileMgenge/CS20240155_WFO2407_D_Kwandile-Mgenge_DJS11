@@ -185,6 +185,22 @@ button:hover {
   max-width: 12rem;
 }
 
+.episodes {
+  margin: .5rem 0;
+  gap: 2rem;
+}
+
+.season-link,
+.desc-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.season-link:hover,
+.desc-link:hover {
+  color: var(--kabul-color);
+}
+
 /* D-R-Y */
 
 .logo,

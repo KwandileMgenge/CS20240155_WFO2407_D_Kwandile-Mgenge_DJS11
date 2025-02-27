@@ -4,6 +4,7 @@ import Layout from "./components/Layout"
 import Previews from "./components/Previews"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import PodcastDetails from "./components/PodcastDetails"
+import SeasonDetails from "./components/SeasonDetails"
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/previews" element={<Layout/>}>
             <Route index element={<Previews/>}/>
             <Route path="podcast/:id" element={<PodcastDetails/>}/>
+            <Route path="podcast/:id/:season" element={<SeasonDetails/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
