@@ -410,18 +410,18 @@ li a:hover {
   color: white;
   text-align: center;
   padding: 20px;
-  position: fixed;
   width: 100%;
   bottom: 0;
 }
 
 .footer a {
-  color: #61dafb;
+  color: var(--primary-color);
   text-decoration: none;
   margin: 0 10px;
 }
 
 .footer a:hover {
+  color: var(--kabul-color);
   text-decoration: underline;
 }
 
