@@ -55,16 +55,6 @@ function PodcastDetails() {
               <Link to={`/previews/podcast/${podcastId}/season/${season.season}`} className='season-link'>
                 <h4>Season {season.season}</h4>
               </Link>
-              {/* {expandedSeason === index && season.episodes && season.episodes.length > 0 ? (
-                <div className='episodes'>
-                  <img src={season.image} alt="" className='preview-img'/>
-                  {season.episodes.map((episode, episodeIndex) => (
-                    <div key={episodeIndex} className='episode'>
-                      {episode.title} — <audio src={episode.file} controls={true}></audio>
-                    </div>
-                  ))}
-                </div>
-              ) : null} */}
             </div>
           ))}
         </div>
