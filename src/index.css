@@ -120,6 +120,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   margin: 1rem 1rem;
+  margin-bottom: 10rem;
 }
 
 .previews-container {
@@ -339,6 +340,91 @@ audio::-webkit-media-controls-download-button {
   height: 85vh;
 }
 
+/* ABOUT */
+
+.about-page {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-page h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-page h2 {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+.about-page p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-page ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.about-page ol {
+  padding-left: 20px;
+}
+
+.about-page code {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.back-to-home-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-to-home-link:hover {
+  background-color: var(--kabul-color);
+}
+
+li a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+li a:hover {
+  color: var(--kabul-color);
+}
+
+/* FOOTER */
+/* Footer styles */
+.footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer a {
+  color: #61dafb;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 1200px) {
   .previews-container {
@@ -357,11 +443,15 @@ audio::-webkit-media-controls-download-button {
 @media (max-width: 600px) {
   .previews-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8rem;
+    gap: 5rem;
   }
 
   .podcast-data {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .podcast-tile {
+    min-width: 6rem;
   }
 }
 
@@ -373,5 +463,14 @@ audio::-webkit-media-controls-download-button {
 
   .podcast-tile {
     min-width: 8rem;
+  }
+
+  .filters,
+  .podcast-data {
+    margin-top: 2.5rem;
+  }
+
+  .back-button {
+    top: 7rem;
   }
 }
