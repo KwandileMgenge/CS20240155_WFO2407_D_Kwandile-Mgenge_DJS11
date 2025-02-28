@@ -25,9 +25,6 @@ function PodcastDetails() {
     setIsExpanded(!isExpanded);
   };
 
-  console.log(podcast);
-  console.log(podcast.genres);
-
   return (
     <div className='podcast-data'>
       <div className='podcast-info'>

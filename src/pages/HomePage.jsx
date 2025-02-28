@@ -29,7 +29,7 @@ function HomePage() {
         </Link>
       </div>
     </div>
-    <FeaturedPodcasts/>
+    {/* <FeaturedPodcasts/> */}
     </>
   )
 }

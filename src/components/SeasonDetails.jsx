@@ -26,7 +26,7 @@ function SeasonDetails() {
       {season.episodes.map((episode, index) => (
         <div key={index}>
           <h4>{episode.title}</h4>
-          <audio src={episode.file} controls />
+          <audio src={episode.file} controls className="custom-audio"/>
         </div>
       ))}
     </div>
