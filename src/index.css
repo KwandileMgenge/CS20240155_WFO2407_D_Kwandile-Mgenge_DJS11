@@ -181,13 +181,14 @@ button:hover {
   margin: 0 1rem;
 }
 
-.podcast-img {
+.podcast-img,
+.season-img {
   max-width: 12rem;
 }
 
-.episodes {
-  margin: .5rem 0;
-  gap: 2rem;
+.podcast-genre-list {
+  color: var(--primary-color);
+  gap: 1rem
 }
 
 .season-link,
@@ -201,6 +202,13 @@ button:hover {
   color: var(--kabul-color);
 }
 
+/* SEASON */
+
+.season-episodes {
+  flex-direction: column;
+  gap: 1rem;
+}
+
 /* D-R-Y */
 
 .logo,
@@ -210,7 +218,9 @@ button:hover {
 .previews-page,
 .podcast-tile,
 .podcast-img,
-.podcast-seasons {
+.podcast-seasons,
+.podcast-genre-list,
+.season-episodes {
   display: flex;
   justify-content: center;
   align-items: center;

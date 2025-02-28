@@ -18,8 +18,8 @@ function App() {
 
           <Route path="/previews" element={<Layout/>}>
             <Route index element={<Previews/>}/>
-            <Route path="podcast/:id" element={<PodcastDetails/>}/>
-            <Route path="podcast/:id/:season" element={<SeasonDetails/>}/>
+            <Route path="podcast/:podcastId" element={<PodcastDetails/>}/>
+            <Route path="podcast/:podcastId/season/:seasonId" element={<SeasonDetails/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

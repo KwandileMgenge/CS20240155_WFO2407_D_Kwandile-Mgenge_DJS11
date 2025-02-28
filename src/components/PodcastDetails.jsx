@@ -5,12 +5,12 @@ import { useState, useEffect } from 'react';
 import { genreList } from '../PodcastData';
 
 function PodcastDetails() {
-  const params = useParams();
+  const { podcastId } = useParams();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const { status, error, data: podcast } = useQuery({
-    queryKey: [`podcast-data`, params.id],
-    queryFn: () => getPodcastDetails(params.id),
+    queryKey: [`podcast-data`, podcastId],
+    queryFn: () => getPodcastDetails(podcastId),
   });
 
   if (status === 'pending') return <p className='loading'>Loading podcast...</p>;
@@ -26,12 +26,20 @@ function PodcastDetails() {
   };
 
   console.log(podcast);
+  console.log(podcast.genres);
 
   return (
     <div className='podcast-data'>
       <div className='podcast-info'>
         <h2>{podcast?.title}</h2>
-        <img src={podcast?.image} alt='Podcast Image' className='podcast-img' />
+        <img src={podcast?.image} alt='Podcast Image' className='podcast-img'/>
+        <div className='podcast-genre-list'>
+          {podcast.genres?.filter(genre => genre !== "All" && genre !== "Featured").map( (genre, index) => (
+            <h3 key={index}>
+              {genre}
+            </h3>
+          ))}
+        </div>
         <p>
           {isExpanded ? description : truncatedDescription}
           {hasMore && (
@@ -41,15 +49,14 @@ function PodcastDetails() {
           )}
         </p>
       </div>
+
       {podcast?.seasons && podcast.seasons.length > 0 && (
         <div className='podcast-seasons'>
           <h3>Seasons</h3>
           {podcast.seasons.map((season) => (
             <div key={season.season} className='season'>
-              <Link to={`season-${season.season}`} className='season-link'>
-                <h4>
-                  Season {season.season}
-                </h4>
+              <Link to={`/previews/podcast/${podcastId}/season/${season.season}`} className='season-link'>
+                <h4>Season {season.season}</h4>
               </Link>
               {/* {expandedSeason === index && season.episodes && season.episodes.length > 0 ? (
                 <div className='episodes'>
