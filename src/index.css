@@ -182,7 +182,7 @@ button:hover {
 .filters select,
 .filters input {
   padding: 0.5rem;
-  border: 1px solid var(--primary-color);
+  border: .1rem solid var(--edward-color);
   border-radius: 0.5rem;
   background: var(--secondary-color);
   color: var(--edward-color);
@@ -240,8 +240,53 @@ button:hover {
 .season-episodes {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 1rem;
 }
+
+/* AUDIO PLAYER STYLING */
+audio {
+  width: 20rem;
+  max-width: 30rem; /* Adjust width as needed */
+  background-color: var(--secondary-color);
+  border-radius: 2rem;
+  margin: .5rem;
+}
+
+/* Customize the default controls */
+audio::-webkit-media-controls-panel {
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+}
+
+/* Play/Pause Button */
+audio::-webkit-media-controls-play-button {
+  background-color: var(--primary-color);
+  border-radius: 2rem;
+  transition: all 0.3s ease;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: var(--kabul-color);
+}
+
+/* Volume slider */
+audio::-webkit-media-controls-volume-slider {
+  background-color: var(--edward-color);
+  border-radius: 2rem;
+}
+
+/* Timeline progress bar */
+audio::-webkit-media-controls-timeline {
+  background-color: var(--kabul-color);
+  border-radius: 2rem;
+}
+
+/* Hide download button if needed */
+audio::-webkit-media-controls-download-button {
+  display: none;
+}
+
 
 /* REUSABLE STYLES */
 .logo,

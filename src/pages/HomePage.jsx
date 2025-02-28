@@ -2,9 +2,11 @@ import React from 'react'
 import Logo from '../components/Logo'
 import Headphones from '../assets/headphones.png'
 import { Link } from 'react-router-dom'
+import FeaturedPodcasts from '../components/FeauredPodcasts'
 
 function HomePage() {
   return (
+    <>
     <div className='homepage'>
       <Logo/>
 
@@ -27,6 +29,8 @@ function HomePage() {
         </Link>
       </div>
     </div>
+    <FeaturedPodcasts/>
+    </>
   )
 }
 
