@@ -66,6 +66,9 @@ function SeasonDetails() {
 
   return (
     <div className='season-episodes'>
+      {/* Back Button */}
+      <button className="back-button" onClick={() => navigate(-1)}>← Back</button>
+
       <div className='filters'>
         <select id="season-select" value={seasonId} onChange={handleSeasonChange}>
         {seasons.map(s => (

@@ -83,6 +83,8 @@
   font-size: 1.5rem;
 }
 
+/* BUTTONS */
+
 button {
   color: var(--edward-color);
   background: var(--primary-color);
@@ -97,6 +99,20 @@ button {
 button:hover {
   background: transparent;
   color: var(--primary-color);
+}
+
+.back-button {
+  position: absolute;
+  top: 5rem;
+  left: .5rem;
+  background-color: transparent;
+  color: var(--edward-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
 /* PREVIEWS */
@@ -242,6 +258,22 @@ button:hover {
   gap: 1rem;
 }
 
+/* #season-select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+#season-select:hover {
+  background-color: var(--kabul-color);
+} */
+
+
 /* AUDIO PLAYER STYLING */
 audio {
   width: 20rem;
@@ -327,11 +359,19 @@ audio::-webkit-media-controls-download-button {
     grid-template-columns: repeat(2, 1fr);
     gap: 8rem;
   }
+
+  .podcast-data {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (max-width: 400px) {
   .previews-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
+  }
+
+  .podcast-tile {
+    min-width: 8rem;
   }
 }
